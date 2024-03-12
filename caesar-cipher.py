@@ -29,3 +29,22 @@ while True: # Keep asking until user enters e or d
         break
     print('Please enter the letter e or d.')
 
+# Let the user enter the key to use
+while True: # Keep asking until the user enters a valid key
+    maxKey = len(SYMBOLS) - 1
+    print('Please enter the key (0 to {}) to use.'.format(maxKey))
+    response = input('> ').upper()
+    if not response.isdecimal():
+        continue
+
+    if 0 <= int(response) < len(SYMBOLS):
+        key = int(response)
+        break
+
+# Let the user enter the message to encrypt/decrypt
+print('Enter the message to {}'.format(mode))
+message = input('> ').upper()
+
+
+
+
